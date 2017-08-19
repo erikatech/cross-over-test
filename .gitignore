@@ -1,0 +1,10 @@
+node_modules/*
+controllers/*
+helpers/*
+routes/*
+videos/*
+src/*
+.idea/
+*js
+*.json
+.md
