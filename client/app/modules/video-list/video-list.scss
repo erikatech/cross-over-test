@@ -1,4 +1,5 @@
 .video-list-namespace {
+	width: 100%;
 	.title-container {
 		min-height: 60px;
 		background: rgba(101, 173, 255, 0.18);
@@ -12,6 +13,12 @@
 		}
 	}
 
+	.ul-pulled-right {
+		max-width: 40%;
+		position: absolute;
+		right: 20px;
+	}
+
 	ul {
 		width: 100%;
 
@@ -20,7 +27,10 @@
 			font-size: 13px;
 			cursor: pointer;
 			width: 100%;
-			margin: 0;
+			margin: 5px 0;
+			padding: 5px 0;
+			border-radius: 5px;
+			outline: none;
 		}
 
 		h2:hover {
@@ -28,18 +38,41 @@
 		}
 
 		li {
-			max-width: 445px;
+			background: #fafafa;
+			max-width: 365px;
+			min-width: 365px;
+			max-height: 325px;
+			min-height: 325px;
 			display: inline-block;
-			max-height: 600px;
 			float: left;
 			margin: 20px;
+			padding: 15px;
+			overflow: hidden;
+			border-radius: 8px;
+			box-shadow: 2px 3px 11px 0 #d2d2d2;
 		}
 
 		p {
-			margin: 0;
+			overflow : hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
 			font-family: robotoregular;
 			font-size: 10px;
+
+			/*display: block;
+			max-width: 300px;
+			-webkit-line-clamp: 5;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			margin: 0;
+			font-family: robotoregular;
+			font-size: 10px;*/
 		}
+
+
 	}
 }
 

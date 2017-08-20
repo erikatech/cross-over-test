@@ -1,12 +1,13 @@
-<div class="video-list-namespace" layout="column"
-	 scroll-to-end="$videoList.getMoreVideos" style="overflow: auto">
+<div class="video-list-namespace" layout="column">
 	<div layout="row" layout-align="center center" class="title-container">
 		<h1>Cross Over Video Portal</h1>
 	</div>
 
-	<div layout="row">
-		<div ui-view></div>
-		<ul>
+	<md-content md-scroll-y layout="row" flex scroll-to-end="$videoList.getMoreVideos" style="overflow: auto">
+		<div style="position: fixed" ng-if="$videoList.selectedVideo !== undefined" flex="60" ui-view></div>
+
+		<ul ng-class="$videoList.selectedVideo !== undefined ? 'ul-pulled-right' : ''"
+			flex="$videoList.selectedVideo !== undefined ? '40' : '100'">
 			<li ng-repeat="video in $videoList.videoList">
 				<h2 ng-click="$videoList.goToDetail(video)">{{video.name}}</h2>
 				<div class="video-item-container">
@@ -33,7 +34,7 @@
 				<p>{{ video.description }}</p>
 			</li>
 		</ul>
-	</div>
+	</md-content>
 
 
 
