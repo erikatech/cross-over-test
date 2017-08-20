@@ -4,10 +4,10 @@
 	</div>
 
 	<md-content md-scroll-y layout="row" flex scroll-to-end="$videoList.getMoreVideos" style="overflow: auto">
-		<div style="position: fixed" ng-if="$videoList.selectedVideo !== undefined" flex="60" ui-view></div>
+		<div id="selected-video-container"
+			 ng-if="$videoList.selectedVideo !== undefined" flex="60" ui-view></div>
 
-		<ul ng-class="$videoList.selectedVideo !== undefined ? 'ul-pulled-right' : ''"
-			flex="$videoList.selectedVideo !== undefined ? '40' : '100'">
+		<ul flex="$videoList.selectedVideo !== undefined ? '40' : '100'">
 			<li ng-repeat="video in $videoList.videoList">
 				<h2 ng-click="$videoList.goToDetail(video)">{{video.name}}</h2>
 				<div class="video-item-container">
