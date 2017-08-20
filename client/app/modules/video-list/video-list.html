@@ -7,13 +7,19 @@
 	</div>
 
 	<md-content md-scroll-y layout="row" flex scroll-to-end="$videoList.getMoreVideos" style="overflow: auto">
+
+		<!-- used to inject the video details page -->
 		<div id="selected-video-container"
 			 ng-if="$videoList.selectedVideo !== undefined" flex="60" ui-view></div>
+		<!-- ended the video details container -->
 
 		<ul flex="$videoList.selectedVideo !== undefined ? '40' : '100'">
 			<li ng-repeat="video in $videoList.videoList">
+				<!-- show video details -->
 				<h2 ng-click="$videoList.goToDetail(video)">{{video.name}}</h2>
+
 				<div class="video-item-container">
+					<!-- videogular API usage -->
 					<videogular vg-responsive="true" vg-update-state="$videoList.onUpdateState($state, video._id)"
 								vg-player-ready="$videoList.onPlayerReady($API, video._id)">
 						<vg-media vg-src="video.config.sources">
@@ -33,15 +39,14 @@
 						</vg-controls>
 					</videogular>
 				</div>
+				<!-- the overall rating -->
 				<ng-rate-it ng-model="video.overallRating" read-only="true" max="5" step="1"></ng-rate-it>
+
+				<!-- video description -->
 				<p>{{ video.description }}</p>
 			</li>
 		</ul>
 	</md-content>
-
-
-
-
 </div>
 
 

@@ -32,7 +32,8 @@
 		<h3>Please help us improve our videos quality. Evaluate it</h3>
 		<div layout="row" layout-align="center center">
 			<ng-rate-it resetable="false" ng-model="$videoDetail.rating" max="5" step="1"></ng-rate-it>
-			<md-button class="evaluate-button" ng-click="$videoDetail.submitEvaluation()">Submit Evaluation</md-button>
+			<md-button ng-disabled="$videoDetail.rating === 0"
+					   class="evaluate-button" ng-click="$videoDetail.submitEvaluation()">Submit</md-button>
 
 			<span ng-if="$videoDetail.successMessage">{{$videoDetail.successMessage}}</span>
 		</div>
