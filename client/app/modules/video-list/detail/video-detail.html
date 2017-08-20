@@ -1,0 +1,32 @@
+<div class="detail-namespace" layout="column" layout-align="center center" layout-fill flex>
+
+	<md-button ng-click="$videoDetail.backToVideoList()">Back to Video List</md-button>
+
+	<h2>{{$videoDetail.video.name}}</h2>
+	<videogular vg-responsive="true">
+		<vg-media vg-src="$videoDetail.video.config.sources">
+		</vg-media>
+		<vg-controls>
+			<vg-play-pause-button></vg-play-pause-button>
+			<vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+			<vg-scrub-bar>
+				<vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+			</vg-scrub-bar>
+			<vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+			<vg-volume>
+				<vg-mute-button></vg-mute-button>
+				<vg-volume-bar></vg-volume-bar>
+			</vg-volume>
+			<vg-fullscreen-button></vg-fullscreen-button>
+		</vg-controls>
+	</videogular>
+
+	<div layout="row" layout-align="start center">
+		<ng-rate-it ng-model="$videoDetail.rating" max="5" step="1"></ng-rate-it>
+		<div layout="row" layout-align="end center">
+			<md-button ng-click="$videoDetail.submitEvaluation()">Submit Evaluation</md-button>
+		</div>
+	</div>
+
+	<p>{{$videoDetail.video.description}}</p>
+</div>

@@ -1,0 +1,38 @@
+<div class="auth-namespace" layout-fill flex>
+
+	<h1>Video Portal</h1>
+	<p>Play and Rate Videos</p>
+
+	<md-card>
+		<md-card-title>
+			<span>LOGIN</span>
+		</md-card-title>
+
+		<md-card-content>
+			<form novalidate name="loginForm" ng-submit="loginForm.$valid && $authCtrl.authenticate()">
+
+				<md-input-container class="md-icon-float md-block">
+					<label>Username</label>
+					<md-icon md-svg-src="app/assets/images/auth/ic_person_black_24px.svg"></md-icon>
+					<input name="username" id="username" ng-model="$authCtrl.user.username" required>
+					<div ng-messages="loginForm.username.$error">
+						<div ng-message="required">Field must be filled</div>
+					</div>
+				</md-input-container>
+
+				<md-input-container class="md-icon-float md-block">
+					<label>Password</label>
+					<md-icon md-svg-src="app/assets/images/auth/ic_lock_black_24px.svg"></md-icon>
+					<input name="userPassword" id="password"
+						   ng-model="$authCtrl.user.password" type="password" required>
+					<div ng-messages="loginForm.userPassword.$error">
+						<div ng-message="required">Field must be filled</div>
+					</div>
+				</md-input-container>
+
+				<md-button type="submit">Sign in</md-button>
+			</form>
+
+		</md-card-content>
+	</md-card>
+</div>

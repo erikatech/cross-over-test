@@ -1,0 +1,45 @@
+.video-list-namespace {
+	.title-container {
+		min-height: 60px;
+		background: rgba(101, 173, 255, 0.18);
+		h1 {
+			font-family: robotoregular;
+			font-size: 25px;
+			width: 100%;
+			text-align: center;
+			margin: 0;
+			height:100%;
+		}
+	}
+
+	ul {
+		width: 100%;
+
+		h2 {
+			font-family: robotobold;
+			font-size: 13px;
+			cursor: pointer;
+			width: 100%;
+			margin: 0;
+		}
+
+		h2:hover {
+			background: lightgray;
+		}
+
+		li {
+			max-width: 445px;
+			display: inline-block;
+			max-height: 600px;
+			float: left;
+			margin: 20px;
+		}
+
+		p {
+			margin: 0;
+			font-family: robotoregular;
+			font-size: 10px;
+		}
+	}
+}
+
