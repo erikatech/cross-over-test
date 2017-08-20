@@ -1,34 +1,62 @@
-.video-list-namespace {
-	.detail-namespace {
-		max-width: 640px;
-		margin: 0 90px;
+.detail-namespace {
+	max-width: 640px;
+	margin: 15px 70px;
 
+	.video-title-container {
+		width: 100%;
+		min-height: 50px;
+		margin-bottom: 15px;
+	}
+
+	h2 {
+		font-size: 16px;
+		font-family: robotobold;
+	}
+
+	p {
+		font-size: 14px;
+		font-family: robotoregular;
+	}
+
+	span {
+		font-size: 12px;
+		font-family: robotobold;
+	}
+
+	.ngrateit-star {
+		outline: none;
+	}
+
+	.evaluation-container {
+		width: 100%;
+		margin-top: 15px;
+		border-radius: 5px;
+		border: 1px solid lightgray;
+		min-height: 95px;
 
 		div {
-			width: 100%;
+			padding:5px 0;
 		}
 
-		h2 {
-			font-family: robotobold;
-			font-size: 16px;
-			cursor: pointer;
+		h3 {
 			width: 100%;
+			border-bottom: 1px solid lightgray;
 			margin: 0;
-		}
-
-		p {
-			margin: 0;
+			text-align: center;
 			font-family: robotoregular;
-			font-size: 14px;
+			font-size: 16px;
+			padding:5px 0;
 		}
 
-		.ngrateit-star {
-			outline: none;
+		.evaluate-button {
+			background: #5dc366;
+			border-radius: 8px;
+			font-family: robotobold;
+			font-size: 11px;
 		}
 
-
+		.evaluate-button:hover {
+			background: #90dc96;
+		}
 	}
 }
-
-
-

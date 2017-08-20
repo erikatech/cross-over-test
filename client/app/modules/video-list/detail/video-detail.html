@@ -1,8 +1,15 @@
-<div class="detail-namespace" layout="column" layout-align="center center" layout-fill flex>
+<div class="detail-namespace" layout="column" layout-fill flex>
 
-	<md-button ng-click="$videoDetail.backToVideoList()">Back to Video List</md-button>
+	<div layout="row" class="video-title-container">
+		<h2 flex="60">{{$videoDetail.video.name}}</h2>
 
-	<h2>{{$videoDetail.video.name}}</h2>
+		<div flex layout="row" layout-align="end center">
+			<md-button ng-click="$videoDetail.backToVideoList()" class="md-icon-button" aria-label="Close">
+				<md-icon md-svg-icon="app/assets/images/ic_close_black_24px.svg"></md-icon>
+			</md-button>
+		</div>
+	</div>
+
 	<videogular vg-responsive="true">
 		<vg-media vg-src="$videoDetail.video.config.sources">
 		</vg-media>
@@ -20,13 +27,14 @@
 			<vg-fullscreen-button></vg-fullscreen-button>
 		</vg-controls>
 	</videogular>
+	<p>{{$videoDetail.video.description}}</p>
+	<div layout="column" layout-align="start center" class="evaluation-container">
+		<h3>Please help us improve our videos quality. Evaluate it</h3>
+		<div layout="row" layout-align="center center">
+			<ng-rate-it resetable="false" ng-model="$videoDetail.rating" max="5" step="1"></ng-rate-it>
+			<md-button class="evaluate-button" ng-click="$videoDetail.submitEvaluation()">Submit Evaluation</md-button>
 
-	<div layout="row" layout-align="start center">
-		<ng-rate-it ng-model="$videoDetail.rating" max="5" step="1"></ng-rate-it>
-		<div layout="row" layout-align="end center">
-			<md-button ng-click="$videoDetail.submitEvaluation()">Submit Evaluation</md-button>
+			<span ng-if="$videoDetail.successMessage">{{$videoDetail.successMessage}}</span>
 		</div>
 	</div>
-
-	<p>{{$videoDetail.video.description}}</p>
 </div>
