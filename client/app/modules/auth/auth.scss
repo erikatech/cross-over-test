@@ -1,0 +1,37 @@
+.auth-namespace {
+	background: white;
+
+	md-card {
+		min-width: 420px;
+		min-height: 285px;
+		margin-top: 30px;
+	}
+
+	img {
+		width: 50px;
+	}
+
+	h1 {
+		margin: 0 0 0 10px;
+		font-family: robotobold;
+		font-size: 50px;
+	}
+
+	p {
+		font-family: robotoregular;
+		font-size: 20px;
+		margin: 0;
+	}
+
+	.signin-button {
+		width: 100%;
+		background: #5dc366;
+		border-radius: 8px;
+		font-family: robotobold;
+	}
+
+	.signin-button:hover {
+		background: #90dc96;
+	}
+
+}

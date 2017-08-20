@@ -1,6 +1,9 @@
 <div class="video-list-namespace" layout="column">
 	<div layout="row" layout-align="center center" class="title-container">
 		<h1>Cross Over Video Portal</h1>
+		<div layout-align="end center" layout="row">
+			<md-button ng-click="$videoList.logout()">Logout</md-button>
+		</div>
 	</div>
 
 	<md-content md-scroll-y layout="row" flex scroll-to-end="$videoList.getMoreVideos" style="overflow: auto">

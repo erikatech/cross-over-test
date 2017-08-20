@@ -1,16 +1,14 @@
-<div class="auth-namespace" layout-fill flex>
+<div class="auth-namespace" layout-fill flex layout="column" layout-align="center center">
 
-	<h1>Video Portal</h1>
-	<p>Play and Rate Videos</p>
+	<div layout="row" layout-align="start center">
+		<img src="app/assets/images/video-player-icon.png"/>
+		<h1>Video Portal</h1>
+	</div>
+	<p>Welcome to Video Portal. The place where you can <strong>play</strong> and <strong>rate</strong> videos</p>
 
 	<md-card>
-		<md-card-title>
-			<span>LOGIN</span>
-		</md-card-title>
-
 		<md-card-content>
 			<form novalidate name="loginForm" ng-submit="loginForm.$valid && $authCtrl.authenticate()">
-
 				<md-input-container class="md-icon-float md-block">
 					<label>Username</label>
 					<md-icon md-svg-src="app/assets/images/auth/ic_person_black_24px.svg"></md-icon>
@@ -30,7 +28,7 @@
 					</div>
 				</md-input-container>
 
-				<md-button type="submit">Sign in</md-button>
+				<md-button class="signin-button" type="submit">Sign in</md-button>
 			</form>
 
 		</md-card-content>
