@@ -6,11 +6,16 @@
 		</div>
 	</div>
 
-	<md-content md-scroll-y layout="row" flex scroll-to-end="$videoList.getMoreVideos" style="overflow: auto">
+	<div layout="row" layout-align="center center" ng-if="!$videoList.hasVideos" class="no-videos-available">
+		Sorry, we got no videos for you in the moment
+	</div>
+
+	<md-content md-scroll-y layout-gt-sm="row" layout="column" flex
+				scroll-to-end="$videoList.getMoreVideos" style="overflow: auto">
 
 		<!-- used to inject the video details page -->
-		<div id="selected-video-container"
-			 ng-if="$videoList.selectedVideo !== undefined" flex="60" ui-view></div>
+		<div id="selected-video-container" class="selected-video-container" flex-gt-sm="60" flex="100"
+			 ng-if="$videoList.state.current.name === 'videoList.videoDetail'" ui-view></div>
 		<!-- ended the video details container -->
 
 		<ul flex="$videoList.selectedVideo !== undefined ? '40' : '100'">
@@ -40,7 +45,8 @@
 					</videogular>
 				</div>
 				<!-- the overall rating -->
-				<ng-rate-it ng-model="video.overallRating" read-only="true" max="5" step="1"></ng-rate-it>
+				<!--<ng-rate-it ng-model="video.overallRating" read-only="true" max="5" step="1"></ng-rate-it>-->
+				<star-rating ng-model="video.overallRating" enabled="false"></star-rating>
 
 				<!-- video description -->
 				<p>{{ video.description }}</p>

@@ -1,5 +1,17 @@
 .video-list-namespace {
 	width: 100%;
+
+	.no-videos-available {
+		font-family: robotobold;
+		font-size: 30px;
+		height: 90%;
+		background: white;
+	}
+
+	.selected-video-container {
+		margin-left: 60px;
+	}
+
 	.title-container {
 		min-height: 60px;
 		background: #5dc366;
@@ -60,19 +72,8 @@
 			-webkit-box-orient: vertical;
 			font-family: robotoregular;
 			font-size: 10px;
-
-			/*display: block;
-			max-width: 300px;
-			-webkit-line-clamp: 5;
-			-webkit-box-orient: vertical;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			margin: 0;
-			font-family: robotoregular;
-			font-size: 10px;*/
+			margin: 5px 0 0 0;
 		}
-
-
 	}
 }
 

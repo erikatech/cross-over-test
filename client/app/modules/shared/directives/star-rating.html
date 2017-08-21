@@ -1,0 +1,5 @@
+<div class="star-rating-namespace">
+	<span ng-repeat="star in stars" ng-click="rate(star)" ng-class="enabled ? 'enabled-star' : 'disabled-star'">
+		<i ng-class="star.icon" ng-style="{'font-size': size }"></i>
+	</span>
+</div>

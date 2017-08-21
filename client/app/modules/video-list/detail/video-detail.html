@@ -10,7 +10,8 @@
 		</div>
 	</div>
 
-	<videogular vg-responsive="true">
+	<videogular vg-responsive="true" vg-player-ready="$videoDetail.onPlayerReady($API)"
+		vg-update-state="$videoDetail.onUpdateState($state)">
 		<vg-media vg-src="$videoDetail.video.config.sources">
 		</vg-media>
 		<vg-controls>
@@ -31,11 +32,16 @@
 	<div layout="column" layout-align="start center" class="evaluation-container">
 		<h3>Please help us improve our videos quality. Evaluate it</h3>
 		<div layout="row" layout-align="center center">
-			<ng-rate-it resetable="false" ng-model="$videoDetail.rating" max="5" step="1"></ng-rate-it>
+			<star-rating ng-model="$videoDetail.rating" size="2.1em"></star-rating>
+
+			<!--<ng-rate-it resetable="false" ng-model="$videoDetail.rating" max="5" step="1"></ng-rate-it>-->
 			<md-button ng-disabled="$videoDetail.rating === 0"
 					   class="evaluate-button" ng-click="$videoDetail.submitEvaluation()">Submit</md-button>
 
-			<span ng-if="$videoDetail.successMessage">{{$videoDetail.successMessage}}</span>
+			<span ng-class="$videoDetail.response.status === 'error' ? 'evaluation-error-message' : 'evaluation-success-message'"
+				  layout="row" layout-align="center center" ng-if="$videoDetail.response.message">
+				{{ $videoDetail.response.message }}
+			</span>
 		</div>
 	</div>
 </div>

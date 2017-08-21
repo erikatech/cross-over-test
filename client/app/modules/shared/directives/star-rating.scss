@@ -1,0 +1,16 @@
+.star-rating-namespace {
+ 	.filled-star {
+		color: #fcb601;
+	 }
+	.blank-star{
+		border: 1px solid #fafafa;
+	}
+	.disabled-star {
+		outline: none;
+	}
+
+	.enabled-star {
+		cursor: pointer;
+		outline: none;
+	}
+}

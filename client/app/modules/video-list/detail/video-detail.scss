@@ -1,6 +1,5 @@
 .detail-namespace {
-	max-width: 640px;
-	margin: 15px 70px;
+	width: 100%;
 
 	.video-title-container {
 		width: 100%;
@@ -33,6 +32,24 @@
 		border-radius: 5px;
 		border: 1px solid lightgray;
 		min-height: 95px;
+
+		.abstract-evaluation-message {
+			height: 35px;
+			border-radius: 5px;
+			padding: 0 15px;
+		}
+
+		.evaluation-success-message {
+			@extend .abstract-evaluation-message;
+			background: #ebf5ec;
+			color: #5dc366;
+		}
+
+		.evaluation-error-message {
+			@extend .abstract-evaluation-message;
+			background: #fdf2f2;
+			color: #ff7272;
+		}
 
 		div {
 			padding:5px 0;
