@@ -5,6 +5,5 @@ routes/*
 videos/*
 src/*
 .idea/
-*js
 *.json
 .md
