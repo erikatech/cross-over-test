@@ -3,7 +3,10 @@ controllers/*
 helpers/*
 routes/*
 videos/*
+models/*
 src/*
 .idea/
 *.json
-.md
+*.md
+index.js
+config.js
