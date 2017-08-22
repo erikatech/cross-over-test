@@ -10,15 +10,16 @@
 		<span>Sorry, we got no videos for you in the moment</span>
 	</div>
 
-	<md-content md-scroll-y layout-gt-sm="row" layout="column" flex
-				scroll-to-end="$videoList.getMoreVideos" style="overflow: auto">
-
+	<md-content class="video-list-content" md-scroll-y scroll-to-end="$videoList.getMoreVideos"
+		ng-class="$videoList.state.current.name === 'videoList.videoDetail' ? 'video-list-content-reduced'
+							: 'video-list-content-expanded'">
 		<!-- used to inject the video details page -->
-		<div id="selected-video-container" class="selected-video-container" flex-gt-sm="60" flex="100"
+		<div id="selected-video-container" class="selected-video-container"
 			 ng-if="$videoList.state.current.name === 'videoList.videoDetail'" ui-view></div>
 		<!-- ended the video details container -->
 
-		<ul flex="$videoList.selectedVideo !== undefined ? '40' : '100'">
+		<ul ng-class="$videoList.state.current.name === 'videoList.videoDetail' ? 'ul-list-reduced'
+						: 'ul-list-expanded'">
 			<li ng-repeat="video in $videoList.videoList">
 				<!-- show video details -->
 				<h2 ng-click="$videoList.goToDetail(video)">{{video.name}}</h2>

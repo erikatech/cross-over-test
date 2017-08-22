@@ -1,6 +1,5 @@
 .video-list-namespace {
 	width: 100%;
-
 	.no-videos-available {
 		font-family: robotobold;
 		font-size: 30px;
@@ -8,8 +7,41 @@
 		background: white;
 	}
 
+	.video-list-content-expanded {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.video-list-content-reduced {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+
+		@media screen and (max-width: 1100px){
+			flex-direction: row;
+		}
+	}
+
 	.selected-video-container {
-		margin-left: 60px;
+		width: 60%;
+		margin-left: 30px;
+
+		@media screen and (max-width: 1100px){
+			width: 100%;
+			margin: 0 30px;
+		}
+	}
+
+	.ul-list-expanded {
+		width: 100%;
+	}
+
+	.ul-list-reduced {
+		width: 40%;
+		@media screen and (max-width: 1100px){
+			width: 100%;
+		}
 	}
 
 	.title-container {
@@ -25,14 +57,11 @@
 		}
 	}
 
-	.ul-pulled-right {
-		max-width: 40%;
-		position: absolute;
-		right: 20px;
-	}
-
 	ul {
-		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 40%;
 
 		h2 {
 			font-family: robotobold;
@@ -43,6 +72,10 @@
 			padding: 5px 0;
 			border-radius: 5px;
 			outline: none;
+			@media screen and (max-width: 1100px){
+				font-size: 16px;
+				-webkit-line-clamp: 1;
+			}
 		}
 
 		h2:hover {
@@ -73,7 +106,10 @@
 			font-family: robotoregular;
 			font-size: 10px;
 			margin: 5px 0 0 0;
+			@media screen and (max-width: 1100px){
+				font-size: 16px;
+				-webkit-line-clamp: 1;
+			}
 		}
 	}
 }
-
