@@ -7,7 +7,7 @@
 	</div>
 
 	<div layout="row" layout-align="center center" ng-if="!$videoList.hasVideos" class="no-videos-available">
-		Sorry, we got no videos for you in the moment
+		<span>Sorry, we got no videos for you in the moment</span>
 	</div>
 
 	<md-content md-scroll-y layout-gt-sm="row" layout="column" flex
@@ -45,7 +45,6 @@
 					</videogular>
 				</div>
 				<!-- the overall rating -->
-				<!--<ng-rate-it ng-model="video.overallRating" read-only="true" max="5" step="1"></ng-rate-it>-->
 				<star-rating ng-model="video.overallRating" enabled="false"></star-rating>
 
 				<!-- video description -->

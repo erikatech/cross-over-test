@@ -34,7 +34,6 @@
 		<div layout="row" layout-align="center center">
 			<star-rating ng-model="$videoDetail.rating" size="2.1em"></star-rating>
 
-			<!--<ng-rate-it resetable="false" ng-model="$videoDetail.rating" max="5" step="1"></ng-rate-it>-->
 			<md-button ng-disabled="$videoDetail.rating === 0"
 					   class="evaluate-button" ng-click="$videoDetail.submitEvaluation()">Submit</md-button>
 
