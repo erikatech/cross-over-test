@@ -6,7 +6,6 @@ videos/*
 models/*
 src/*
 .idea/
-*.json
 *.md
 index.js
 config.js
