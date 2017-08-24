@@ -5,3 +5,7 @@ src/
 **/*.map
 app/assets/dist/js/*.js
 app/assets/css/*.css
+.yo-rc.json
+coverage/
+package-lock.json
+video-portal-appbundle.js

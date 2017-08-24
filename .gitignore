@@ -5,6 +5,8 @@ routes/*
 videos/*
 models/*
 src/*
+package.json
+npm-debug.log
 .idea/
 *.md
 index.js
