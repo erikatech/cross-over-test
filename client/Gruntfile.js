@@ -32,7 +32,7 @@ module.exports = function (grunt) {
 		},
 
 		exec: {
-			bowerInstaller: 'npm install'
+			bowerInstaller: 'bower install'
 		},
 
 		concat: {
@@ -161,6 +161,7 @@ module.exports = function (grunt) {
 
 	// Register grunt tasks
 	grunt.registerTask("build", [
+		"clean",
 		"exec",
 		"ngtemplates",
 		"concat",

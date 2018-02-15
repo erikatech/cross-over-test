@@ -51,7 +51,7 @@
 		function _backToVideoList(){
 			// I set the reload to true, so the selectedVideo is set to undefined
 			// and I can have a better control of the elements being exhibited on the screen
-			$state.go('videoList', {}, { reload: true });
+			$state.go('videoList');
 		}
 
 		/**
@@ -72,7 +72,7 @@
 					// Shows a message, if something goes wrong
 					CustomToastService.show(error.message);
 					context.response = {message: "Error while submitting the evaluation", status: 'error'} ;
-				})
+				});
 		}
 
 		/**

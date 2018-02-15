@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="test.js"></script>
+<script>
+
+    var input = [
+        {
+            "id": 7832454551,
+            "name": "usr",
+            "type": "DIRECTORY"
+        },
+        {
+            "id": 7832454554,
+            "name": "applications",
+            "type": "DIRECTORY",
+            "parentId": 7832454553
+        },
+        {
+            "id": 7832454555,
+            "name": "mimeinfo.cache",
+            "type": "FILE",
+            "parentId": 7832454554
+        },
+        {
+            "id": 7832454553,
+            "name": "share",
+            "type": "DIRECTORY",
+            "parentId": 7832454552
+        },
+        {
+            "id": 7832454552,
+            "name": "local",
+            "type": "DIRECTORY",
+            "parentId": 7832454551
+        }
+    ];
+    var fileTree = createFileTree(input);
+    console.log(fileTree.nodes);
+
+</script>
+
+
+
+
+
+</body>
+</html>
